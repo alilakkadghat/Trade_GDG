@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as LandingRouteImport } from './routes/landing'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as AppIndexRouteImport } from './routes/_app.index'
 import { Route as AppSignalsRouteImport } from './routes/_app.signals'
@@ -27,6 +28,11 @@ const SignupRoute = SignupRouteImport.update({
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandingRoute = LandingRouteImport.update({
+  id: '/landing',
+  path: '/landing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppRoute = AppRouteImport.update({
@@ -66,6 +72,7 @@ const AppComplianceRoute = AppComplianceRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
+  '/landing': typeof LandingRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
   '/compliance': typeof AppComplianceRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/signals': typeof AppSignalsRoute
 }
 export interface FileRoutesByTo {
+  '/landing': typeof LandingRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
   '/compliance': typeof AppComplianceRoute
@@ -87,6 +95,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteWithChildren
+  '/landing': typeof LandingRoute
   '/login': typeof LoginRoute
   '/signup': typeof SignupRoute
   '/_app/compliance': typeof AppComplianceRoute
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/landing'
     | '/login'
     | '/signup'
     | '/compliance'
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/signals'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/landing'
     | '/login'
     | '/signup'
     | '/compliance'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/_app'
+    | '/landing'
     | '/login'
     | '/signup'
     | '/_app/compliance'
@@ -132,6 +144,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   AppRoute: typeof AppRouteWithChildren
+  LandingRoute: typeof LandingRoute
   LoginRoute: typeof LoginRoute
   SignupRoute: typeof SignupRoute
 }
@@ -150,6 +163,13 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landing': {
+      id: '/landing'
+      path: '/landing'
+      fullPath: '/landing'
+      preLoaderRoute: typeof LandingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app': {
@@ -226,6 +246,7 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRouteWithChildren,
+  LandingRoute: LandingRoute,
   LoginRoute: LoginRoute,
   SignupRoute: SignupRoute,
 }
