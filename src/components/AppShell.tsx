@@ -1,4 +1,7 @@
-import { Link, Outlet, useLocation } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Home,
   FileText,
@@ -47,7 +50,7 @@ const notifications = [
 ];
 
 const navItems = [
-  { to: "/", label: "Overview", icon: Home },
+  { to: "/overview", label: "Overview", icon: Home },
   { to: "/documents", label: "Document Intelligence", icon: FileText },
   { to: "/compliance", label: "Compliance Checker", icon: ShieldCheck },
   { to: "/delays", label: "Delay Resolution", icon: AlertTriangle },
@@ -55,7 +58,7 @@ const navItems = [
 ] as const;
 
 const titleMap: Record<string, string> = {
-  "/": "Overview",
+  "/overview": "Overview",
   "/documents": "Document Intelligence",
   "/compliance": "Compliance Checker",
   "/delays": "Delay Resolution",
@@ -63,9 +66,9 @@ const titleMap: Record<string, string> = {
   "/settings": "User Settings",
 };
 
-export function AppShell() {
-  const location = useLocation();
-  const title = titleMap[location.pathname] ?? "TradeBot";
+export function AppShell({ children }: { children?: React.ReactNode }) {
+  const pathname = usePathname();
+  const title = titleMap[pathname] ?? "TradeBot";
 
   return (
     <div className="min-h-screen flex bg-surface">
@@ -89,16 +92,15 @@ export function AppShell() {
 
         <nav className="flex-1 px-3 space-y-1">
           {navItems.map(({ to, label, icon: Icon }) => {
-            const active = location.pathname === to;
+            const active = pathname === to;
             return (
               <Link
                 key={to}
-                to={to}
-                className={`relative flex items-center gap-3 px-4 py-2.5 rounded-md text-sm transition-colors ${
-                  active
-                    ? "bg-surface-lowest text-foreground font-medium"
-                    : "text-muted-foreground hover:bg-surface-container hover:text-foreground"
-                }`}
+                href={to}
+                className={`relative flex items-center gap-3 px-4 py-2.5 rounded-md text-sm transition-colors ${active
+                  ? "bg-surface-lowest text-foreground font-medium"
+                  : "text-muted-foreground hover:bg-surface-container hover:text-foreground"
+                  }`}
               >
                 {active && (
                   <span className="absolute left-0 top-1.5 bottom-1.5 w-1 rounded-r-full bg-secondary" />
@@ -112,14 +114,14 @@ export function AppShell() {
 
         <div className="px-3 pb-6 space-y-1">
           <Link
-            to="/settings"
+            href="/settings"
             className="flex items-center gap-3 px-4 py-2.5 rounded-md text-sm text-muted-foreground hover:bg-surface-container hover:text-foreground"
           >
             <Settings className="h-4 w-4" strokeWidth={1.75} />
             User Settings
           </Link>
           <Link
-            to="/login"
+            href="/login"
             className="flex items-center gap-3 px-4 py-2.5 rounded-md text-sm text-muted-foreground hover:bg-surface-container hover:text-foreground"
           >
             <LogOut className="h-4 w-4" strokeWidth={1.75} />
@@ -168,13 +170,12 @@ export function AppShell() {
                     <div key={n.id} className="px-4 py-3 hover:bg-surface-low cursor-pointer">
                       <div className="flex items-start gap-3">
                         <span
-                          className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${
-                            n.severity === "critical"
-                              ? "bg-destructive"
-                              : n.severity === "warning"
-                                ? "bg-amber-500"
-                                : "bg-secondary"
-                          }`}
+                          className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${n.severity === "critical"
+                            ? "bg-destructive"
+                            : n.severity === "warning"
+                              ? "bg-amber-500"
+                              : "bg-secondary"
+                            }`}
                         />
                         <div className="min-w-0 flex-1">
                           <div className="text-sm text-foreground font-medium truncate">
@@ -191,7 +192,7 @@ export function AppShell() {
                 </div>
                 <DropdownMenuSeparator />
                 <Link
-                  to="/signals"
+                  href="/signals"
                   className="block px-4 py-2.5 text-xs text-center text-muted-foreground hover:text-foreground hover:bg-surface-low"
                 >
                   View all alerts
@@ -222,13 +223,13 @@ export function AppShell() {
                   Account
                 </DropdownMenuLabel>
                 <DropdownMenuItem asChild>
-                  <Link to="/settings" className="cursor-pointer">
+                  <Link href="/settings" className="cursor-pointer">
                     <User className="h-4 w-4" />
                     Profile & settings
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/settings" className="cursor-pointer">
+                  <Link href="/settings" className="cursor-pointer">
                     <Settings className="h-4 w-4" />
                     Workspace
                   </Link>
@@ -239,7 +240,7 @@ export function AppShell() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link to="/login" className="cursor-pointer text-on-destructive-container">
+                  <Link href="/login" className="cursor-pointer text-on-destructive-container">
                     <LogOut className="h-4 w-4" />
                     Logout
                   </Link>
@@ -250,7 +251,7 @@ export function AppShell() {
         </header>
 
         <main className="flex-1 px-8 pb-12 pt-2 min-w-0">
-          <Outlet />
+          {children}
         </main>
       </div>
     </div>
