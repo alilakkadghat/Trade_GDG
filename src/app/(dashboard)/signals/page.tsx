@@ -1,11 +1,128 @@
 "use client";
 
-import { useState } from "react";
-import { Card, Badge, statusToTone } from "@/components/ui-bits";
-import { Search, Filter, Bookmark, MapPin, Activity, Bell } from "lucide-react";
+import { useEffect, useState } from "react";
+import Map from "@/components/Map";
+import { locationToCoords } from "@/lib/locationMap";
 
-// Expanded mock data for the feed
-const signals = [
+export default function SignalsPage() {
+  const [signals, setSignals] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedSignal, setSelectedSignal] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/signals")
+      .then((res) => res.json())
+      .then((data) => {
+        setSignals(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch signals:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="space-y-6 max-w-[1400px] mx-auto">
+        <h1 className="text-4xl font-semibold">Geopolitical Signals</h1>
+        <p className="text-muted-foreground">Loading signals...</p>
+      </div>
+    );
+  }
+
+  const highRiskPorts = signals
+    .filter((s: any) => s.risk === "HIGH")
+    .map((s: any, i: number) => {
+      const coords = locationToCoords[s.location] || [20, 0];
+
+      return {
+        ...s,
+        lat: coords[0],
+        lng: coords[1],
+        port: s.title,
+        country: s.location,
+        risk: "HIGH",
+      };
+    });
+
+  return (
+    <div className="space-y-6 max-w-[1400px] mx-auto">
+      <div className="pt-2">
+        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">
+          Real-time intelligence
+        </p>
+        <h2 className="text-4xl font-semibold tracking-tight text-foreground">
+          Geopolitical Signals
+        </h2>
+      </div>
+
+      <div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>
+        <span style={{ color: "red" }}>● High Risk</span>
+        <span style={{ color: "green" }}>● Low Risk</span>
+      </div>
+
+      <div style={{
+        height: "500px",
+        borderRadius: "12px",
+        overflow: "hidden",
+        marginBottom: "20px"
+      }}>
+        <Map ports={highRiskPorts} selected={selectedSignal} />
+      </div>
+
+      <div className="space-y-4">
+        {signals.map((s, i) => (
+          <div
+            key={i}
+            onClick={() => setSelectedSignal(s)}
+            style={{ cursor: "pointer" }}
+            className="border border-ghost rounded-lg p-6 hover:border-secondary transition-colors"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {s.title}
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Source:</strong> {s.source}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Location:</strong> {s.location}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Category:</strong> {s.category}
+                  </p>
+                </div>
+              </div>
+              <div className="shrink-0 text-right">
+                <div
+                  className={`px-4 py-2 rounded-md font-medium text-sm ${
+                    s.risk === "HIGH"
+                      ? "bg-red-500/20 text-red-700 dark:text-red-400"
+                      : "bg-green-500/20 text-green-700 dark:text-green-400"
+                  }`}
+                >
+                  {s.risk}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {signals.length === 0 && (
+        <p className="text-muted-foreground text-center py-12">
+          No signals available
+        </p>
+      )}
+    </div>
+  );
+}
+
+// Old mock data (kept for reference)
+const oldSignals = [
     {
         id: "SIG-091",
         type: "Geopolitical",
@@ -64,7 +181,7 @@ const signals = [
 
 const categories = ["All", "Geopolitical", "Regulatory", "Port Ops", "Weather", "Freight Rates"];
 
-export default function IntelligenceFeed() {
+function IntelligenceFeed() {
     const [filter, setFilter] = useState("All");
 
     const filtered = filter === "All" ? signals : signals.filter((s) => s.type === filter);
