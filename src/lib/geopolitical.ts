@@ -8,7 +8,8 @@ type NewsArticle = {
 
 type Signal = {
   title: string;
-  risk: string;
+  impact: string;
+  event: string;
   category: string;
   location: string;
   source?: string | null;
@@ -165,13 +166,12 @@ function detectLocation(text: string) {
   return matches.sort((a, b) => b.length - a.length)[0];
 }
 
-// 5. Risk level
-function getRiskLevel(event: string) {
-  const highRisk = ["Conflict", "Security Threat", "Port Closure", "Trade Ban", "Sanctions"];
-  const mediumRisk = ["Port Strike", "Port Congestion", "Shipping Disruption", "Delay"];
+// 5. Impact level
+function getImpactLevel(title: string): "HIGH" | "MEDIUM" | "LOW" {
+  const t = title.toLowerCase();
 
-  if (highRisk.includes(event)) return "HIGH";
-  if (mediumRisk.includes(event)) return "MEDIUM";
+  if (/(war|attack|missile|blockade|conflict)/.test(t)) return "HIGH";
+  if (/(strike|protest|delay|sanction|tariff)/.test(t)) return "MEDIUM";
   return "LOW";
 }
 
@@ -193,11 +193,12 @@ function getCategory(text: string) {
 }
 
 // 5b. Extract location
-function getLocation(text: string) {
-  if (text.includes("India")) return "India";
-  if (text.includes("China")) return "China";
-  if (text.includes("Red Sea")) return "Red Sea";
-  if (text.includes("Suez")) return "Suez Canal";
+export function extractLocation(title: string) {
+  if (title.includes("India")) return "India";
+  if (title.includes("Iran")) return "Iran";
+  if (title.includes("China")) return "China";
+  if (title.includes("Red Sea")) return "Red Sea";
+  if (title.includes("Suez")) return "Suez Canal";
 
   return "Global";
 }
@@ -212,9 +213,35 @@ export async function getSignals(): Promise<Signal[]> {
     return {
       title: article.title || "Untitled",
       source: article.source?.name || "Unknown",
-      risk: getRiskLevel(detectEvent(text)),
+      impact: getImpactLevel(article.title || ""),
+      event: detectEvent(text),
       category: getCategory(text),
-      location: getLocation(text),
+      location: extractLocation(article.title || ""),
     };
   });
+}
+
+export function getPortRisk(port: any, signals: any[]) {
+  const portName = port.port.toLowerCase();
+  const country = port.country.toLowerCase();
+
+  const relevantSignals = signals.filter((s: any) => {
+    const title = s.title.toLowerCase();
+    const location = s.location.toLowerCase();
+
+    return (
+      title.includes(portName) ||               // direct hit
+      location === country ||                   // country-level
+      location.includes("global") ||            // global impact
+      location.includes("red sea") ||           // trade chokepoints
+      location.includes("suez") ||
+      location.includes("middle east")
+    );
+  });
+
+  const highCount = relevantSignals.filter((s: any) => s.impact === "HIGH").length;
+
+  if (highCount >= 2) return "HIGH";
+  if (highCount === 1) return "MEDIUM";
+  return "LOW";
 }

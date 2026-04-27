@@ -5,10 +5,20 @@ export async function GET(req: Request) {
   const containerId = searchParams.get("id");
 
   if (!containerId) {
-    return Response.json({ error: "Missing container ID" }, { status: 400 });
+    return Response.json(
+      { error: "Missing container ID. Pass ?id=MSCU1234567" },
+      { status: 400 }
+    );
   }
 
-  const data = await getShipmentStatus(containerId);
-
-  return Response.json(data);
+  try {
+    const data = await getShipmentStatus(containerId);
+    return Response.json(data);
+  } catch (err: any) {
+    const isNotFound = err.message?.includes("not found");
+    return Response.json(
+      { error: err.message ?? "Failed to fetch shipment status" },
+      { status: isNotFound ? 404 : 500 }
+    );
+  }
 }

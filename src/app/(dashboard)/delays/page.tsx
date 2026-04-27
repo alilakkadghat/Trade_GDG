@@ -1,9 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, Badge } from "@/components/ui-bits";
 import { shipments } from "@/lib/mock-data";
 import { Sparkles, FileDown, Clock, ChevronDown } from "lucide-react";
+
+const getDelayStatus = (shipment: any) => {
+    if (shipment.status !== "INPROGRESS") {
+        return "Delayed / Attention Needed";
+    }
+    return "On Track";
+};
 
 const delayTypes = [
     "Blank Sailing",
@@ -21,6 +28,20 @@ export default function DelayResolution() {
     const [shipment, setShipment] = useState("SHP-2024-001");
     const [delayType, setDelayType] = useState("Blank Sailing");
 
+    const [apiShipments, setApiShipments] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetch("/api/shipsgo")
+            .then(res => res.json())
+            .then(data => {
+                console.log("Shipments:", data.data?.shipments);
+                if (data.data?.shipments) {
+                    setApiShipments(data.data.shipments);
+                }
+            })
+            .catch(err => console.error(err));
+    }, []);
+
     return (
         <div className="space-y-6 max-w-[1400px] mx-auto">
             <div className="pt-2">
@@ -37,8 +58,9 @@ export default function DelayResolution() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-6 items-start">
-                {/* Form */}
-                <Card>
+                <div className="space-y-6">
+                    {/* Form */}
+                    <Card>
                     <h3 className="text-sm font-semibold text-foreground">Incident Report</h3>
                     <div className="mt-6 space-y-6">
                         <Field label="Shipment ID">
@@ -78,7 +100,33 @@ export default function DelayResolution() {
                             <Sparkles className="h-4 w-4" /> Analyze
                         </button>
                     </div>
-                </Card>
+                    </Card>
+
+                    {/* ShipsGo Integrations Data */}
+                    <Card>
+                        <h3 className="text-sm font-semibold text-foreground">Live Tracking Feed</h3>
+                        <div className="mt-4 space-y-3">
+                            {apiShipments.length === 0 ? (
+                                <p className="text-xs text-muted-foreground">Fetching shipments from ShipsGo...</p>
+                            ) : (
+                                apiShipments.map((s) => (
+                                    <div key={s.id} className="p-3 bg-surface border border-ghost rounded-md">
+                                        <div className="flex justify-between items-start mb-2">
+                                            <p className="font-mono text-sm font-medium">{s.reference}</p>
+                                            <Badge tone={s.status !== "INPROGRESS" ? "warning" : "success"}>
+                                                {getDelayStatus(s)}
+                                            </Badge>
+                                        </div>
+                                        <div className="text-xs text-muted-foreground space-y-1">
+                                            <p>Status: {s.status}</p>
+                                            <p>Container: {s.container_number}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </Card>
+                </div>
 
                 {/* Output */}
                 {!shown ? (
