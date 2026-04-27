@@ -1,0 +1,22 @@
+[
+  { "port": "Nhava Sheva (JNPT)", "lat": 18.9497, "lng": 72.9483, "country": "India" },
+  { "port": "Mundra Port", "lat": 22.8390, "lng": 69.7210, "country": "India" },
+  { "port": "Kandla Port", "lat": 23.0333, "lng": 70.2167, "country": "India" },
+  { "port": "Pipavav Port", "lat": 20.9000, "lng": 71.5000, "country": "India" },
+  { "port": "Hazira Port", "lat": 21.1000, "lng": 72.6500, "country": "India" },
+
+  { "port": "Chennai Port", "lat": 13.0827, "lng": 80.2707, "country": "India" },
+  { "port": "Ennore Port (Kamarajar)", "lat": 13.2500, "lng": 80.3200, "country": "India" },
+  { "port": "Visakhapatnam Port", "lat": 17.6868, "lng": 83.2185, "country": "India" },
+
+  { "port": "Cochin Port", "lat": 9.9667, "lng": 76.2667, "country": "India" },
+  { "port": "Tuticorin Port (V.O. Chidambaranar)", "lat": 8.7642, "lng": 78.1348, "country": "India" },
+
+  { "port": "Kolkata Port", "lat": 22.5411, "lng": 88.3378, "country": "India" },
+
+  { "port": "Durban Port", "lat": -29.8717, "lng": 31.0218, "country": "South Africa" },
+  { "port": "Mombasa Port", "lat": -4.0435, "lng": 39.6682, "country": "Kenya" },
+  { "port": "Lagos Port", "lat": 6.4550, "lng": 3.3841, "country": "Nigeria" },
+  { "port": "Port of Alexandria", "lat": 31.2001, "lng": 29.9187, "country": "Egypt" },
+  { "port": "Tema Port", "lat": 5.6698, "lng": -0.0166, "country": "Ghana" }
+]

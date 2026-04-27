@@ -71,9 +71,9 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
   const title = titleMap[pathname] ?? "TradeBot";
 
   return (
-    <div className="min-h-screen flex bg-surface">
+    <div className="h-screen overflow-hidden flex bg-surface">
       {/* Sidebar */}
-      <aside className="w-64 shrink-0 bg-surface-low flex flex-col">
+      <aside className="w-64 h-full shrink-0 bg-surface-low flex flex-col">
         <div className="px-6 pt-7 pb-10">
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 rounded-md bg-primary text-primary-foreground grid place-items-center font-semibold">
@@ -88,7 +88,7 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
           </div>
         </div>
 
-        <nav className="flex-1 px-3 space-y-1">
+        <nav className="flex-1 overflow-y-auto px-3 space-y-1">
           {navItems.map(({ to, label, icon: Icon }) => {
             const active = pathname === to;
             return (
@@ -130,8 +130,8 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
       </aside>
 
       {/* Main */}
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="h-16 px-8 flex items-center justify-between bg-surface">
+      <div className="flex-1 h-full flex flex-col min-w-0 overflow-hidden">
+        <header className="h-16 shrink-0 px-8 flex items-center justify-between bg-surface">
           <h1 className="text-base font-semibold text-foreground">{title}</h1>
           <div className="flex items-center gap-5">
             <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-low text-sm text-muted-foreground w-72">
@@ -250,7 +250,9 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
           </div>
         </header>
 
-        <main className="flex-1 px-8 pb-12 pt-2 min-w-0">{children}</main>
+        <main className="flex-1 overflow-y-auto px-8 pb-12 pt-2 min-w-0">
+          {children}
+        </main>
       </div>
     </div>
   );
