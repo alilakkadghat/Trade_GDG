@@ -32,12 +32,26 @@ const PORTS = [
 ];
 
 const ROUTES: [number, number][] = [
-  [0, 3], [0, 4], [0, 5], [0, 6], [0, 7],
-  [1, 4], [1, 7], [1, 11],
-  [2, 4], [2, 7],
-  [3, 5], [3, 6],
-  [4, 7], [4, 12],
-  [5, 6], [5, 8], [6, 9], [9, 12], [10, 6], [11, 5],
+  [0, 3],
+  [0, 4],
+  [0, 5],
+  [0, 6],
+  [0, 7],
+  [1, 4],
+  [1, 7],
+  [1, 11],
+  [2, 4],
+  [2, 7],
+  [3, 5],
+  [3, 6],
+  [4, 7],
+  [4, 12],
+  [5, 6],
+  [5, 8],
+  [6, 9],
+  [9, 12],
+  [10, 6],
+  [11, 5],
 ];
 
 const RADIUS = 1;
@@ -59,14 +73,9 @@ function useEarthTexture() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const res = await fetch(
-        "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-      );
+      const res = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
       const topo = await res.json();
-      const geo = feature(
-        topo,
-        topo.objects.countries,
-      ) as unknown as FeatureCollection<Geometry>;
+      const geo = feature(topo, topo.objects.countries) as unknown as FeatureCollection<Geometry>;
 
       const W = 4096;
       const H = 2048;
@@ -243,16 +252,10 @@ function GlobeMesh() {
   );
 }
 
-function Pulse({
-  curve,
-  offset,
-}: {
-  curve: THREE.QuadraticBezierCurve3;
-  offset: number;
-}) {
+function Pulse({ curve, offset }: { curve: THREE.QuadraticBezierCurve3; offset: number }) {
   const ref = useRef<THREE.Mesh>(null!);
   useFrame(({ clock }) => {
-    const t = ((clock.getElapsedTime() * 0.18 + offset) % 1);
+    const t = (clock.getElapsedTime() * 0.18 + offset) % 1;
     const p = curve.getPoint(t);
     ref.current.position.copy(p);
     const s = 0.6 + Math.sin(t * Math.PI) * 0.6;
@@ -276,12 +279,7 @@ function RingPulse() {
   return (
     <mesh ref={ref}>
       <ringGeometry args={[1, 1.25, 32]} />
-      <meshBasicMaterial
-        color={"#7dffb6"}
-        transparent
-        opacity={0.8}
-        side={THREE.DoubleSide}
-      />
+      <meshBasicMaterial color={"#7dffb6"} transparent opacity={0.8} side={THREE.DoubleSide} />
     </mesh>
   );
 }

@@ -1,17 +1,7 @@
 import type { ReactNode } from "react";
 
-export function Card({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <div className={`bg-surface-lowest rounded-lg p-6 ${className}`}>
-      {children}
-    </div>
-  );
+export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <div className={`bg-surface-lowest rounded-lg p-6 ${className}`}>{children}</div>;
 }
 
 type Tone = "neutral" | "success" | "warning" | "critical" | "info";
@@ -57,7 +47,12 @@ export function statusToTone(status: string): Tone {
   const s = status.toLowerCase();
   if (s.includes("transit") || s.includes("cleared") || s === "ok") return "success";
   if (s.includes("pending") || s.includes("warning")) return "warning";
-  if (s.includes("delayed") || s.includes("mismatch") || s.includes("missing") || s.includes("critical"))
+  if (
+    s.includes("delayed") ||
+    s.includes("mismatch") ||
+    s.includes("missing") ||
+    s.includes("critical")
+  )
     return "critical";
   return "info";
 }

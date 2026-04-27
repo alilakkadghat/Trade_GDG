@@ -155,8 +155,7 @@ export const validationResults: ValidationResult[] = [
     expected: "8517.62.00",
     extracted: "—",
     severity: "Critical",
-    suggestion:
-      "Add HS 8517.62.00 to invoice line item 3. Required for EU TARIC clearance.",
+    suggestion: "Add HS 8517.62.00 to invoice line item 3. Required for EU TARIC clearance.",
   },
   {
     status: "WARNING",
@@ -165,8 +164,7 @@ export const validationResults: ValidationResult[] = [
     expected: "1,250 kg",
     extracted: "1,248 kg",
     severity: "Warning",
-    suggestion:
-      "2kg variance within tolerance. Acceptable but flag for carrier weighing dispute.",
+    suggestion: "2kg variance within tolerance. Acceptable but flag for carrier weighing dispute.",
   },
   {
     status: "OK",
@@ -190,7 +188,13 @@ export const validationResults: ValidationResult[] = [
 
 export interface GeoSignal {
   id: string;
-  type: "Port Strike" | "Tariff Hike" | "Sanction" | "Border Closure" | "Conflict Zone" | "Policy Shock";
+  type:
+    | "Port Strike"
+    | "Tariff Hike"
+    | "Sanction"
+    | "Border Closure"
+    | "Conflict Zone"
+    | "Policy Shock";
   region: string;
   affectedCountries: string[];
   description: string;

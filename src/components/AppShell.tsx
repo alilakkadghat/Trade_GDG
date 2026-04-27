@@ -80,9 +80,7 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
               T
             </div>
             <div>
-              <div className="text-sm font-semibold tracking-tight text-foreground">
-                TradeBot
-              </div>
+              <div className="text-sm font-semibold tracking-tight text-foreground">TradeBot</div>
               <div className="text-[11px] uppercase tracking-wider text-muted-foreground">
                 Export Intelligence
               </div>
@@ -97,10 +95,11 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
               <Link
                 key={to}
                 href={to}
-                className={`relative flex items-center gap-3 px-4 py-2.5 rounded-md text-sm transition-colors ${active
-                  ? "bg-surface-lowest text-foreground font-medium"
-                  : "text-muted-foreground hover:bg-surface-container hover:text-foreground"
-                  }`}
+                className={`relative flex items-center gap-3 px-4 py-2.5 rounded-md text-sm transition-colors ${
+                  active
+                    ? "bg-surface-lowest text-foreground font-medium"
+                    : "text-muted-foreground hover:bg-surface-container hover:text-foreground"
+                }`}
               >
                 {active && (
                   <span className="absolute left-0 top-1.5 bottom-1.5 w-1 rounded-r-full bg-secondary" />
@@ -170,12 +169,13 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
                     <div key={n.id} className="px-4 py-3 hover:bg-surface-low cursor-pointer">
                       <div className="flex items-start gap-3">
                         <span
-                          className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${n.severity === "critical"
-                            ? "bg-destructive"
-                            : n.severity === "warning"
-                              ? "bg-amber-500"
-                              : "bg-secondary"
-                            }`}
+                          className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${
+                            n.severity === "critical"
+                              ? "bg-destructive"
+                              : n.severity === "warning"
+                                ? "bg-amber-500"
+                                : "bg-secondary"
+                          }`}
                         />
                         <div className="min-w-0 flex-1">
                           <div className="text-sm text-foreground font-medium truncate">
@@ -250,9 +250,7 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
           </div>
         </header>
 
-        <main className="flex-1 px-8 pb-12 pt-2 min-w-0">
-          {children}
-        </main>
+        <main className="flex-1 px-8 pb-12 pt-2 min-w-0">{children}</main>
       </div>
     </div>
   );
