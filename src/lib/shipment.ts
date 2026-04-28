@@ -21,16 +21,16 @@ interface ShipsGoContainer {
   container_number: string;
   carrier: string;
   status: string;
-  pol: string;               // port of loading (name)
-  pod: string;               // port of discharge (name)
-  eta: string | null;        // ISO date string
-  ata: string | null;        // actual time of arrival
-  atd: string | null;        // actual time of departure
+  pol: string; // port of loading (name)
+  pod: string; // port of discharge (name)
+  eta: string | null; // ISO date string
+  ata: string | null; // actual time of arrival
+  atd: string | null; // actual time of departure
   current_location: string;
   vessel_name: string;
   voyage_number: string;
   events: ShipsGoEvent[];
-  delay_days?: number;       // ShipsGo sometimes returns this directly
+  delay_days?: number; // ShipsGo sometimes returns this directly
 }
 
 // ─── Our enriched response ───────────────────────────────────────────────────
@@ -63,17 +63,14 @@ async function fetchShipsGo(containerId: string): Promise<ShipsGoContainer> {
     throw new Error("Missing SHIPSGO_API_KEY in environment variables");
   }
 
-  const res = await fetch(
-    `https://api.shipsgodata.com/v2/container/${containerId}`,
-    {
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      // Don't cache — we always want live data
-      next: { revalidate: 0 },
-    }
-  );
+  const res = await fetch(`https://api.shipsgodata.com/v2/container/${containerId}`, {
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    // Don't cache — we always want live data
+    next: { revalidate: 0 },
+  });
 
   if (res.status === 404) {
     throw new Error(`Container ${containerId} not found on ShipsGo`);
@@ -123,16 +120,16 @@ function calculateDelay(data: ShipsGoContainer): {
 
   // 3. Scan events for delay keywords
   const delayKeywords = [
-    { pattern: /rolled/i,           reason: "Cargo rolled to next sailing",          days: 7  },
-    { pattern: /blank sailing/i,     reason: "Blank sailing — vessel cancelled",      days: 7  },
-    { pattern: /omit/i,              reason: "Port omitted by carrier",               days: 5  },
-    { pattern: /congestion/i,        reason: "Port congestion reported",              days: 3  },
-    { pattern: /customs hold/i,      reason: "Customs hold at port",                  days: 4  },
-    { pattern: /reroute|divert/i,    reason: "Vessel rerouted (e.g. Red Sea bypass)", days: 12 },
-    { pattern: /equipment shortage/i,reason: "Equipment shortage at terminal",        days: 3  },
-    { pattern: /strike/i,            reason: "Port or terminal strike action",        days: 4  },
-    { pattern: /weather/i,           reason: "Weather-related delay",                 days: 2  },
-    { pattern: /transhipment delay/i,reason: "Transhipment delay at hub port",        days: 5  },
+    { pattern: /rolled/i, reason: "Cargo rolled to next sailing", days: 7 },
+    { pattern: /blank sailing/i, reason: "Blank sailing — vessel cancelled", days: 7 },
+    { pattern: /omit/i, reason: "Port omitted by carrier", days: 5 },
+    { pattern: /congestion/i, reason: "Port congestion reported", days: 3 },
+    { pattern: /customs hold/i, reason: "Customs hold at port", days: 4 },
+    { pattern: /reroute|divert/i, reason: "Vessel rerouted (e.g. Red Sea bypass)", days: 12 },
+    { pattern: /equipment shortage/i, reason: "Equipment shortage at terminal", days: 3 },
+    { pattern: /strike/i, reason: "Port or terminal strike action", days: 4 },
+    { pattern: /weather/i, reason: "Weather-related delay", days: 2 },
+    { pattern: /transhipment delay/i, reason: "Transhipment delay at hub port", days: 5 },
   ];
 
   for (const event of data.events || []) {
@@ -147,7 +144,7 @@ function calculateDelay(data: ShipsGoContainer): {
 
   // 4. Derive risk level
   let delayRisk: "LOW" | "MED" | "HIGH" = "LOW";
-  if (delayDays >= 7)  delayRisk = "HIGH";
+  if (delayDays >= 7) delayRisk = "HIGH";
   else if (delayDays >= 3) delayRisk = "MED";
 
   return { delayRisk, delayDays, delayReasons: reasons };
@@ -203,16 +200,13 @@ async function overlayGeoRisk(data: ShipsGoContainer): Promise<{
 
 // ─── Main export ─────────────────────────────────────────────────────────────
 
-export async function getShipmentStatus(
-  containerId: string
-): Promise<ShipmentStatus> {
+export async function getShipmentStatus(containerId: string): Promise<ShipmentStatus> {
   const raw = await fetchShipsGo(containerId);
 
-  const [{ delayRisk, delayDays, delayReasons }, { geoRisk, geoRiskReasons }] =
-    await Promise.all([
-      Promise.resolve(calculateDelay(raw)),
-      overlayGeoRisk(raw),
-    ]);
+  const [{ delayRisk, delayDays, delayReasons }, { geoRisk, geoRiskReasons }] = await Promise.all([
+    Promise.resolve(calculateDelay(raw)),
+    overlayGeoRisk(raw),
+  ]);
 
   return {
     containerId: raw.container_number,

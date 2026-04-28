@@ -6,10 +6,10 @@ import { shipments } from "@/lib/mock-data";
 import { Sparkles, FileDown, Clock, ChevronDown } from "lucide-react";
 
 const getDelayStatus = (shipment: any) => {
-    if (shipment.status !== "INPROGRESS") {
-        return "Delayed / Attention Needed";
-    }
-    return "On Track";
+  if (shipment.status !== "INPROGRESS") {
+    return "Delayed / Attention Needed";
+  }
+  return "On Track";
 };
 
 const delayTypes = [
@@ -30,23 +30,23 @@ const cargoLocations = [
 ];
 
 export default function DelayResolution() {
-    const [shown, setShown] = useState(false);
-    const [shipment, setShipment] = useState("SHP-2024-001");
-    const [delayType, setDelayType] = useState("Blank Sailing");
+  const [shown, setShown] = useState(false);
+  const [shipment, setShipment] = useState("SHP-2024-001");
+  const [delayType, setDelayType] = useState("Blank Sailing");
 
-    const [apiShipments, setApiShipments] = useState<any[]>([]);
+  const [apiShipments, setApiShipments] = useState<any[]>([]);
 
-    useEffect(() => {
-        fetch("/api/shipsgo")
-            .then(res => res.json())
-            .then(data => {
-                console.log("Shipments:", data.data?.shipments);
-                if (data.data?.shipments) {
-                    setApiShipments(data.data.shipments);
-                }
-            })
-            .catch(err => console.error(err));
-    }, []);
+  useEffect(() => {
+    fetch("/api/shipsgo")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Shipments:", data.data?.shipments);
+        if (data.data?.shipments) {
+          setApiShipments(data.data.shipments);
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <div className="space-y-6 max-w-[1400px] mx-auto">
@@ -61,76 +61,76 @@ export default function DelayResolution() {
         </p>
       </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-6 items-start">
-                <div className="space-y-6">
-                    {/* Form */}
-                    <Card>
-                    <h3 className="text-sm font-semibold text-foreground">Incident Report</h3>
-                    <div className="mt-6 space-y-6">
-                        <Field label="Shipment ID">
-                            <Select value={shipment} onChange={setShipment}>
-                                {shipments.map((s) => (
-                                    <option key={s.id} value={s.id}>
-                                        {s.id} — {s.destination}
-                                    </option>
-                                ))}
-                            </Select>
-                        </Field>
-                        <Field label="Cargo Location">
-                            <Select value={cargoLocations[1]} onChange={() => { }}>
-                                {cargoLocations.map((l) => (
-                                    <option key={l}>{l}</option>
-                                ))}
-                            </Select>
-                        </Field>
-                        <Field label="Delay Type">
-                            <Select value={delayType} onChange={setDelayType}>
-                                {delayTypes.map((d) => (
-                                    <option key={d}>{d}</option>
-                                ))}
-                            </Select>
-                        </Field>
-                        <Field label="Description">
-                            <textarea
-                                rows={4}
-                                defaultValue="Carrier notified blank sailing for vessel MSC LORETO V.428W. Container gated-in at Nhava Sheva CFS, awaiting next available vessel."
-                                className="w-full bg-transparent outline-none text-sm text-foreground border-b-2 border-ghost focus:border-secondary pb-2 resize-none"
-                            />
-                        </Field>
-                        <button
-                            onClick={() => setShown(true)}
-                            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-primary-container text-primary-foreground text-sm font-medium hover:bg-primary"
-                        >
-                            <Sparkles className="h-4 w-4" /> Analyze
-                        </button>
-                    </div>
-                    </Card>
+      <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-6 items-start">
+        <div className="space-y-6">
+          {/* Form */}
+          <Card>
+            <h3 className="text-sm font-semibold text-foreground">Incident Report</h3>
+            <div className="mt-6 space-y-6">
+              <Field label="Shipment ID">
+                <Select value={shipment} onChange={setShipment}>
+                  {shipments.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.id} — {s.destination}
+                    </option>
+                  ))}
+                </Select>
+              </Field>
+              <Field label="Cargo Location">
+                <Select value={cargoLocations[1]} onChange={() => {}}>
+                  {cargoLocations.map((l) => (
+                    <option key={l}>{l}</option>
+                  ))}
+                </Select>
+              </Field>
+              <Field label="Delay Type">
+                <Select value={delayType} onChange={setDelayType}>
+                  {delayTypes.map((d) => (
+                    <option key={d}>{d}</option>
+                  ))}
+                </Select>
+              </Field>
+              <Field label="Description">
+                <textarea
+                  rows={4}
+                  defaultValue="Carrier notified blank sailing for vessel MSC LORETO V.428W. Container gated-in at Nhava Sheva CFS, awaiting next available vessel."
+                  className="w-full bg-transparent outline-none text-sm text-foreground border-b-2 border-ghost focus:border-secondary pb-2 resize-none"
+                />
+              </Field>
+              <button
+                onClick={() => setShown(true)}
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-primary-container text-primary-foreground text-sm font-medium hover:bg-primary"
+              >
+                <Sparkles className="h-4 w-4" /> Analyze
+              </button>
+            </div>
+          </Card>
 
-                    {/* ShipsGo Integrations Data */}
-                    <Card>
-                        <h3 className="text-sm font-semibold text-foreground">Live Tracking Feed</h3>
-                        <div className="mt-4 space-y-3">
-                            {apiShipments.length === 0 ? (
-                                <p className="text-xs text-muted-foreground">Fetching shipments from ShipsGo...</p>
-                            ) : (
-                                apiShipments.map((s) => (
-                                    <div key={s.id} className="p-3 bg-surface border border-ghost rounded-md">
-                                        <div className="flex justify-between items-start mb-2">
-                                            <p className="font-mono text-sm font-medium">{s.reference}</p>
-                                            <Badge tone={s.status !== "INPROGRESS" ? "warning" : "success"}>
-                                                {getDelayStatus(s)}
-                                            </Badge>
-                                        </div>
-                                        <div className="text-xs text-muted-foreground space-y-1">
-                                            <p>Status: {s.status}</p>
-                                            <p>Container: {s.container_number}</p>
-                                        </div>
-                                    </div>
-                                ))
-                            )}
-                        </div>
-                    </Card>
-                </div>
+          {/* ShipsGo Integrations Data */}
+          <Card>
+            <h3 className="text-sm font-semibold text-foreground">Live Tracking Feed</h3>
+            <div className="mt-4 space-y-3">
+              {apiShipments.length === 0 ? (
+                <p className="text-xs text-muted-foreground">Fetching shipments from ShipsGo...</p>
+              ) : (
+                apiShipments.map((s) => (
+                  <div key={s.id} className="p-3 bg-surface border border-ghost rounded-md">
+                    <div className="flex justify-between items-start mb-2">
+                      <p className="font-mono text-sm font-medium">{s.reference}</p>
+                      <Badge tone={s.status !== "INPROGRESS" ? "warning" : "success"}>
+                        {getDelayStatus(s)}
+                      </Badge>
+                    </div>
+                    <div className="text-xs text-muted-foreground space-y-1">
+                      <p>Status: {s.status}</p>
+                      <p>Container: {s.container_number}</p>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </Card>
+        </div>
 
         {/* Output */}
         {!shown ? (

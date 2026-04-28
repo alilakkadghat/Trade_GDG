@@ -1,1 +1,429 @@
-{"nodes": [{"id": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "label": "page.tsx", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L1"}, {"id": "page_handlefiles", "label": "handleFiles()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L117"}, {"id": "page_handlevalidate", "label": "handleValidate()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L155"}, {"id": "page_handlecompliance", "label": "handleCompliance()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L171"}, {"id": "page_handlerag", "label": "handleRag()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L185"}, {"id": "page_handlecreateshipment", "label": "handleCreateShipment()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L197"}, {"id": "page_togglesection", "label": "toggleSection()", "file_type": "code", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L216"}], "edges": [{"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "react", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L3", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "ui_bits", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L4", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "doc_api", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L5", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "lucide_react", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L18", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_handlefiles", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L117", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_handlevalidate", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L155", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_handlecompliance", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L171", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_handlerag", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L185", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_handlecreateshipment", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L197", "weight": 1.0}, {"source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx", "target": "page_togglesection", "relation": "contains", "confidence": "EXTRACTED", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L216", "weight": 1.0}], "raw_calls": [{"caller_nid": "page_handlefiles", "callee": "setUploading", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L119"}, {"caller_nid": "page_handlefiles", "callee": "setPipelineStep", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L120"}, {"caller_nid": "page_handlefiles", "callee": "from", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L121"}, {"caller_nid": "page_handlefiles", "callee": "setUploadQueue", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L123"}, {"caller_nid": "page_handlefiles", "callee": "map", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L123"}, {"caller_nid": "page_handlefiles", "callee": "setCurrentUploadIndex", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L124"}, {"caller_nid": "page_handlefiles", "callee": "setCurrentUploadIndex", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L128"}, {"caller_nid": "page_handlefiles", "callee": "setUploadQueue", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L129"}, {"caller_nid": "page_handlefiles", "callee": "setPipelineStep", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L132"}, {"caller_nid": "page_handlefiles", "callee": "uploadDocument", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L135"}, {"caller_nid": "page_handlefiles", "callee": "setUploadQueue", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L136"}, {"caller_nid": "page_handlefiles", "callee": "error", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L140"}, {"caller_nid": "page_handlefiles", "callee": "setUploadQueue", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L141"}, {"caller_nid": "page_handlefiles", "callee": "setPipelineStep", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L147"}, {"caller_nid": "page_handlefiles", "callee": "setTimeout", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L148"}, {"caller_nid": "page_handlevalidate", "callee": "setValidating", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L157"}, {"caller_nid": "page_handlevalidate", "callee": "setPipelineStep", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L158"}, {"caller_nid": "page_handlevalidate", "callee": "runValidation", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L160"}, {"caller_nid": "page_handlevalidate", "callee": "setValidationResults", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L161"}, {"caller_nid": "page_handlevalidate", "callee": "setValidationSummary", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L162"}, {"caller_nid": "page_handlevalidate", "callee": "setExpandedSection", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L163"}, {"caller_nid": "page_handlevalidate", "callee": "setPipelineStep", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L164"}, {"caller_nid": "page_handlevalidate", "callee": "error", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L166"}, {"caller_nid": "page_handlevalidate", "callee": "setValidating", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L168"}, {"caller_nid": "page_handlecompliance", "callee": "setCheckingCompliance", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L173"}, {"caller_nid": "page_handlecompliance", "callee": "runCompliance", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L175"}, {"caller_nid": "page_handlecompliance", "callee": "setComplianceChecks", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L176"}, {"caller_nid": "page_handlecompliance", "callee": "setComplianceSummary", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L177"}, {"caller_nid": "page_handlecompliance", "callee": "setExpandedSection", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L178"}, {"caller_nid": "page_handlecompliance", "callee": "error", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L180"}, {"caller_nid": "page_handlecompliance", "callee": "setCheckingCompliance", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L182"}, {"caller_nid": "page_handlerag", "callee": "trim", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L186"}, {"caller_nid": "page_handlerag", "callee": "setRagLoading", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L187"}, {"caller_nid": "page_handlerag", "callee": "ragQuery", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L189"}, {"caller_nid": "page_handlerag", "callee": "setRagAnswer", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L190"}, {"caller_nid": "page_handlerag", "callee": "setRagAnswer", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L192"}, {"caller_nid": "page_handlerag", "callee": "setRagLoading", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L194"}, {"caller_nid": "page_handlecreateshipment", "callee": "setCreatingShipment", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L199"}, {"caller_nid": "page_handlecreateshipment", "callee": "import", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L201"}, {"caller_nid": "page_handlecreateshipment", "callee": "createTransaction", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L202"}, {"caller_nid": "page_handlecreateshipment", "callee": "setTransactions", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L206"}, {"caller_nid": "page_handlecreateshipment", "callee": "setActiveTransaction", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L207"}, {"caller_nid": "page_handlecreateshipment", "callee": "setShowNewShipment", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L208"}, {"caller_nid": "page_handlecreateshipment", "callee": "setNewShipmentData", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L209"}, {"caller_nid": "page_handlecreateshipment", "callee": "error", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L211"}, {"caller_nid": "page_handlecreateshipment", "callee": "setCreatingShipment", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L213"}, {"caller_nid": "page_togglesection", "callee": "setExpandedSection", "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx", "source_location": "L217"}]}
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "page_handlefiles",
+      "label": "handleFiles()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L117"
+    },
+    {
+      "id": "page_handlevalidate",
+      "label": "handleValidate()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L155"
+    },
+    {
+      "id": "page_handlecompliance",
+      "label": "handleCompliance()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L171"
+    },
+    {
+      "id": "page_handlerag",
+      "label": "handleRag()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L185"
+    },
+    {
+      "id": "page_handlecreateshipment",
+      "label": "handleCreateShipment()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L197"
+    },
+    {
+      "id": "page_togglesection",
+      "label": "toggleSection()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L216"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "ui_bits",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "doc_api",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "lucide_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_handlefiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_handlevalidate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_handlecompliance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_handlerag",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_handlecreateshipment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_app_dashboard_documents_page_tsx",
+      "target": "page_togglesection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L216",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setUploading",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L119"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setPipelineStep",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L120"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "from",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L121"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setUploadQueue",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L123"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "map",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L123"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setCurrentUploadIndex",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L124"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setCurrentUploadIndex",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L128"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setUploadQueue",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L129"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setPipelineStep",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L132"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "uploadDocument",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L135"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setUploadQueue",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L136"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "error",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L140"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setUploadQueue",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L141"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setPipelineStep",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L147"
+    },
+    {
+      "caller_nid": "page_handlefiles",
+      "callee": "setTimeout",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L148"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setValidating",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L157"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setPipelineStep",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L158"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "runValidation",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L160"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setValidationResults",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L161"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setValidationSummary",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L162"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setExpandedSection",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L163"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setPipelineStep",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L164"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "error",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L166"
+    },
+    {
+      "caller_nid": "page_handlevalidate",
+      "callee": "setValidating",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L168"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "setCheckingCompliance",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L173"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "runCompliance",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L175"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "setComplianceChecks",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L176"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "setComplianceSummary",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L177"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "setExpandedSection",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L178"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "error",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L180"
+    },
+    {
+      "caller_nid": "page_handlecompliance",
+      "callee": "setCheckingCompliance",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L182"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "trim",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L186"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "setRagLoading",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L187"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "ragQuery",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L189"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "setRagAnswer",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L190"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "setRagAnswer",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L192"
+    },
+    {
+      "caller_nid": "page_handlerag",
+      "callee": "setRagLoading",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L194"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setCreatingShipment",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L199"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "import",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L201"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "createTransaction",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L202"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setTransactions",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L206"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setActiveTransaction",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L207"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setShowNewShipment",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L208"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setNewShipmentData",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L209"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "error",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L211"
+    },
+    {
+      "caller_nid": "page_handlecreateshipment",
+      "callee": "setCreatingShipment",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L213"
+    },
+    {
+      "caller_nid": "page_togglesection",
+      "callee": "setExpandedSection",
+      "source_file": "/Users/apple/Trade_GDG/src/app/(dashboard)/documents/page.tsx",
+      "source_location": "L217"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ export async function fetchNews(): Promise<NewsArticle[]> {
   }
 
   const res = await fetch(
-    `https://newsapi.org/v2/everything?q=(shipping OR port OR logistics OR cargo OR trade) AND (india OR nigeria OR kenya OR ghana OR egypt OR "south africa")&language=en&sortBy=publishedAt&pageSize=30&apiKey=${apiKey}`
+    `https://newsapi.org/v2/everything?q=(shipping OR port OR logistics OR cargo OR trade) AND (india OR nigeria OR kenya OR ghana OR egypt OR "south africa")&language=en&sortBy=publishedAt&pageSize=30&apiKey=${apiKey}`,
   );
 
   if (!res.ok) {
@@ -91,7 +91,7 @@ const EVENT_KEYWORDS = {
   protest: "Civil Unrest",
   unrest: "Civil Unrest",
   riot: "Civil Unrest",
-  election: "Political Risk"
+  election: "Political Risk",
 };
 
 const EVENT_MATCHERS = Object.keys(EVENT_KEYWORDS)
@@ -102,7 +102,7 @@ const EVENT_MATCHERS = Object.keys(EVENT_KEYWORDS)
 
     return {
       key,
-      regex: new RegExp(pattern, "i")
+      regex: new RegExp(pattern, "i"),
     };
   });
 
@@ -142,12 +142,12 @@ const LOCATIONS = [
   "canary islands",
   "australia",
   "port said",
-  "cape town"
+  "cape town",
 ];
 
 const LOCATION_REGEX = LOCATIONS.map((loc) => ({
   loc,
-  regex: new RegExp(`\\b${loc}\\b`, "i")
+  regex: new RegExp(`\\b${loc}\\b`, "i"),
 }));
 
 function detectLocation(text: string) {
@@ -230,10 +230,10 @@ export function getPortRisk(port: any, signals: any[]) {
     const location = s.location.toLowerCase();
 
     return (
-      title.includes(portName) ||               // direct hit
-      location === country ||                   // country-level
-      location.includes("global") ||            // global impact
-      location.includes("red sea") ||           // trade chokepoints
+      title.includes(portName) || // direct hit
+      location === country || // country-level
+      location.includes("global") || // global impact
+      location.includes("red sea") || // trade chokepoints
       location.includes("suez") ||
       location.includes("middle east")
     );

@@ -9,7 +9,7 @@ import { useState } from "react";
 type TooltipDirection = "right" | "left" | "top" | "bottom" | "center" | "auto";
 
 const HIGH_COLOR = "#ff4d4d";
-const LOW_COLOR  = "#4ade80";
+const LOW_COLOR = "#4ade80";
 
 function FlyTo({ target }: { target: [number, number] | null }) {
   const map = useMap();
@@ -22,12 +22,15 @@ export default function Map({ ports }: { ports: any[] }) {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
   const tickerItems = [
-    ...ports.map((p: any) => ({ label: `${p.port} · Risk ${p.risk}`, kind: p.risk === "HIGH" ? "high" : "low" })),
-    { label: "Red Sea corridor · Elevated disruption",   kind: "high"    },
-    { label: "Strait of Hormuz · Monitoring active",     kind: "neutral" },
+    ...ports.map((p: any) => ({
+      label: `${p.port} · Risk ${p.risk}`,
+      kind: p.risk === "HIGH" ? "high" : "low",
+    })),
+    { label: "Red Sea corridor · Elevated disruption", kind: "high" },
+    { label: "Strait of Hormuz · Monitoring active", kind: "neutral" },
     { label: "Cape of Good Hope reroutes · +14% volume", kind: "neutral" },
-    { label: "Singapore throughput · 42,100 TEU/hr",     kind: "low"     },
-    { label: "Mumbai → Dubai ETA · 14h nominal",         kind: "low"     },
+    { label: "Singapore throughput · 42,100 TEU/hr", kind: "low" },
+    { label: "Mumbai → Dubai ETA · 14h nominal", kind: "low" },
   ];
 
   return (
@@ -122,7 +125,6 @@ export default function Map({ ports }: { ports: any[] }) {
       `}</style>
 
       <div className="map-shell">
-
         {/* Sidebar */}
         <div className="map-sidebar">
           <div className="map-sidebar-head">
@@ -136,9 +138,15 @@ export default function Map({ ports }: { ports: any[] }) {
                 <div
                   key={i}
                   className={`map-port-row${activeIdx === i ? " active" : ""}`}
-                  onClick={() => { setFlyTarget([port.lat, port.lng]); setActiveIdx(i); }}
+                  onClick={() => {
+                    setFlyTarget([port.lat, port.lng]);
+                    setActiveIdx(i);
+                  }}
                 >
-                  <div className="map-port-led" style={{ background: isHigh ? HIGH_COLOR : LOW_COLOR }} />
+                  <div
+                    className="map-port-led"
+                    style={{ background: isHigh ? HIGH_COLOR : LOW_COLOR }}
+                  />
                   <div className="map-port-info">
                     <div className="map-port-name">{port.port}</div>
                     <div className="map-port-country">{port.country}</div>
@@ -155,8 +163,14 @@ export default function Map({ ports }: { ports: any[] }) {
           <div className="map-topbar">
             <div className="map-topbar-title">Live Risk View</div>
             <div className="map-legend">
-              <div className="map-legend-item"><div className="map-legend-dot" style={{ background: HIGH_COLOR }} />High Risk</div>
-              <div className="map-legend-item"><div className="map-legend-dot" style={{ background: LOW_COLOR  }} />Low Risk</div>
+              <div className="map-legend-item">
+                <div className="map-legend-dot" style={{ background: HIGH_COLOR }} />
+                High Risk
+              </div>
+              <div className="map-legend-item">
+                <div className="map-legend-dot" style={{ background: LOW_COLOR }} />
+                Low Risk
+              </div>
             </div>
           </div>
 
@@ -182,7 +196,11 @@ export default function Map({ ports }: { ports: any[] }) {
                   eventHandlers={{ click: () => setActiveIdx(i) }}
                 >
                   {/* @ts-ignore */}
-                  <Tooltip direction={"top" as TooltipDirection} offset={[0, -6] as [number, number]} opacity={1}>
+                  <Tooltip
+                    direction={"top" as TooltipDirection}
+                    offset={[0, -6] as [number, number]}
+                    opacity={1}
+                  >
                     {port.port}
                   </Tooltip>
                   <Popup>
@@ -209,7 +227,6 @@ export default function Map({ ports }: { ports: any[] }) {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

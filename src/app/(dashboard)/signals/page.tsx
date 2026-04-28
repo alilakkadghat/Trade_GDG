@@ -49,7 +49,6 @@ export default function SignalsPage() {
 
       {/* Side-by-side layout */}
       <div className="flex gap-6 items-start">
-
         {/* LEFT: Map — sticky so it stays visible while scrolling signals */}
         <div className="w-[520px] xl:w-[600px] shrink-0 sticky top-6">
           <Map ports={ports} />
@@ -60,9 +59,7 @@ export default function SignalsPage() {
           {(() => {
             if (signals.length === 0) {
               return (
-                <p className="text-muted-foreground text-center py-12">
-                  No signals available
-                </p>
+                <p className="text-muted-foreground text-center py-12">No signals available</p>
               );
             }
 
@@ -77,7 +74,7 @@ export default function SignalsPage() {
                 <h3 className="text-sm font-semibold tracking-[0.15em] text-muted-foreground uppercase border-b border-ghost pb-2">
                   {category}
                 </h3>
-                
+
                 {catSignals.map((s: any, i: number) => (
                   <div
                     key={i}
@@ -85,9 +82,7 @@ export default function SignalsPage() {
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-2">
-                          {s.title}
-                        </h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
                         <div className="space-y-2">
                           <p className="text-sm text-muted-foreground">
                             <strong>Source:</strong> {s.source}
@@ -106,8 +101,8 @@ export default function SignalsPage() {
                             s.impact === "HIGH"
                               ? "bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20"
                               : s.impact === "MEDIUM"
-                              ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border border-yellow-500/20"
-                              : "bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20"
+                                ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border border-yellow-500/20"
+                                : "bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20"
                           }`}
                         >
                           <span className="mr-2">

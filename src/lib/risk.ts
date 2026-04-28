@@ -6,11 +6,11 @@ const CITY_TO_COUNTRY: Record<string, string> = {
   mombasa: "kenya",
   durban: "south africa",
   alexandria: "egypt",
-  tema: "ghana"
+  tema: "ghana",
 };
 
 const NORMALIZE: Record<string, string> = {
-  us: "united states"
+  us: "united states",
 };
 
 export async function getPortRisk() {
@@ -25,9 +25,7 @@ export async function getPortRisk() {
         CITY_TO_COUNTRY[signal.location] ||
         signal.location;
 
-      if (
-        normalizedLocation === port.country.trim().toLowerCase()
-      ) {
+      if (normalizedLocation === port.country.trim().toLowerCase()) {
         if (signal.risk === "HIGH") {
           risk = "HIGH";
           break;
@@ -39,7 +37,7 @@ export async function getPortRisk() {
 
     return {
       ...port,
-      risk
+      risk,
     };
   });
 }

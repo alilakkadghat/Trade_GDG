@@ -1,7 +1,8 @@
 const { createClient } = require("@supabase/supabase-js");
 
 const supabaseUrl = "https://lfiooxqgdphkqrowrptd.supabase.co";
-const supabaseServiceKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmaW9veHFnZHBoa3Fyb3dycHRkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzMwOTEyNSwiZXhwIjoyMDkyODg1MTI1fQ.A6r5nDmT6e-JPrTI3nklyeqv74H3QUoi7Wo38sYFEZI";
+const supabaseServiceKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmaW9veHFnZHBoa3Fyb3dycHRkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzMwOTEyNSwiZXhwIjoyMDkyODg1MTI1fQ.A6r5nDmT6e-JPrTI3nklyeqv74H3QUoi7Wo38sYFEZI";
 
 const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
@@ -19,7 +20,7 @@ async function create() {
       role: "Exporter",
     },
   });
-  
+
   if (error) {
     console.error("Error:", error);
   } else {
