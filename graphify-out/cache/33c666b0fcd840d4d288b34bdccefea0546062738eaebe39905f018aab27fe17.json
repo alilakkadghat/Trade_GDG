@@ -1,0 +1,533 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_storage_py",
+      "label": "storage.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "storage_get_supabase",
+      "label": "get_supabase()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "storage_ensure_bucket",
+      "label": "ensure_bucket()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "storage_upload_file",
+      "label": "upload_file()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "storage_download_file",
+      "label": "download_file()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "storage_db_insert",
+      "label": "db_insert()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "storage_db_select",
+      "label": "db_select()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L52"
+    },
+    {
+      "id": "storage_db_select_one",
+      "label": "db_select_one()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "storage_db_update",
+      "label": "db_update()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L68"
+    },
+    {
+      "id": "storage_db_delete",
+      "label": "db_delete()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "storage_db_rpc",
+      "label": "db_rpc()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L82"
+    },
+    {
+      "id": "storage_rationale_1",
+      "label": "Supabase file storage + DB helper.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "storage_rationale_19",
+      "label": "Create the storage bucket if it doesn't exist.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "storage_rationale_31",
+      "label": "Upload file to Supabase Storage. Returns the storage path.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "storage_rationale_39",
+      "label": "Download file from Supabase Storage.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L39"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "supabase",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_get_supabase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_ensure_bucket",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_upload_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_download_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_insert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_select",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_select_one",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_update",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_delete",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_storage_py",
+      "target": "storage_db_rpc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_ensure_bucket",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_upload_file",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_upload_file",
+      "target": "storage_ensure_bucket",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_download_file",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_insert",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_select",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_select_one",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_update",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_delete",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_db_rpc",
+      "target": "storage_get_supabase",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_storage_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_rationale_19",
+      "target": "storage_ensure_bucket",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_rationale_31",
+      "target": "storage_upload_file",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "storage_rationale_39",
+      "target": "storage_download_file",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L39",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "storage_get_supabase",
+      "callee": "create_client",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L14"
+    },
+    {
+      "caller_nid": "storage_ensure_bucket",
+      "callee": "get_bucket",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L22"
+    },
+    {
+      "caller_nid": "storage_ensure_bucket",
+      "callee": "create_bucket",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L25"
+    },
+    {
+      "caller_nid": "storage_upload_file",
+      "callee": "upload",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "storage_upload_file",
+      "callee": "from_",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "storage_download_file",
+      "callee": "download",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L41"
+    },
+    {
+      "caller_nid": "storage_download_file",
+      "callee": "from_",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L41"
+    },
+    {
+      "caller_nid": "storage_db_insert",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L48"
+    },
+    {
+      "caller_nid": "storage_db_insert",
+      "callee": "insert",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L48"
+    },
+    {
+      "caller_nid": "storage_db_insert",
+      "callee": "table",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L48"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L54"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "table",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L54"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "items",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L56"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "eq",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L57"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "storage_db_select",
+      "callee": "order",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "storage_db_select_one",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "storage_db_select_one",
+      "callee": "eq",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "storage_db_select_one",
+      "callee": "select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "storage_db_select_one",
+      "callee": "table",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "storage_db_update",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "storage_db_update",
+      "callee": "eq",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "storage_db_update",
+      "callee": "update",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "storage_db_update",
+      "callee": "table",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "storage_db_delete",
+      "callee": "delete",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "storage_db_delete",
+      "callee": "table",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "storage_db_delete",
+      "callee": "items",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L77"
+    },
+    {
+      "caller_nid": "storage_db_delete",
+      "callee": "eq",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L78"
+    },
+    {
+      "caller_nid": "storage_db_delete",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L79"
+    },
+    {
+      "caller_nid": "storage_db_rpc",
+      "callee": "execute",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L84"
+    },
+    {
+      "caller_nid": "storage_db_rpc",
+      "callee": "rpc",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/storage.py",
+      "source_location": "L84"
+    }
+  ]
+}

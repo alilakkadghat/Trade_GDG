@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "label": "Globe.tsx",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "globe_useisclient",
+      "label": "useIsClient()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "globe_latlontovec3",
+      "label": "latLonToVec3()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L59"
+    },
+    {
+      "id": "globe_useearthtexture",
+      "label": "useEarthTexture()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L70"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "fiber",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "three",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "topojson_client",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "d3_geo",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "geojson",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "globe_useisclient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "globe_latlontovec3",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_landing_globe_tsx",
+      "target": "globe_useearthtexture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L70",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "globe_useisclient",
+      "callee": "useState",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L12"
+    },
+    {
+      "caller_nid": "globe_useisclient",
+      "callee": "useEffect",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L13"
+    },
+    {
+      "caller_nid": "globe_latlontovec3",
+      "callee": "sin",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "globe_latlontovec3",
+      "callee": "cos",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "globe_latlontovec3",
+      "callee": "cos",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "globe_latlontovec3",
+      "callee": "sin",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "globe_latlontovec3",
+      "callee": "sin",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "globe_useearthtexture",
+      "callee": "useState",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "globe_useearthtexture",
+      "callee": "useEffect",
+      "source_file": "/Users/apple/Trade_GDG/src/components/landing/Globe.tsx",
+      "source_location": "L73"
+    }
+  ]
+}

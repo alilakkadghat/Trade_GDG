@@ -1,0 +1,377 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "label": "vectorstore.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "vectorstore_generate_embedding",
+      "label": "generate_embedding()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "vectorstore_generate_query_embedding",
+      "label": "generate_query_embedding()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "vectorstore_chunk_and_store",
+      "label": "chunk_and_store()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "vectorstore_search_similar",
+      "label": "search_similar()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "vectorstore_search_all_relevant",
+      "label": "search_all_relevant()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L65"
+    },
+    {
+      "id": "vectorstore_rationale_1",
+      "label": "Vector store \u2014 embeds document chunks and stores in Supabase pgvector. Uses Goog",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "vectorstore_rationale_22",
+      "label": "Generate embedding using Google's text-embedding-004.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "vectorstore_rationale_27",
+      "label": "Generate embedding optimized for search queries.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "vectorstore_rationale_32",
+      "label": "Split text into chunks, embed each, store in Supabase pgvector.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "vectorstore_rationale_56",
+      "label": "Search for document chunks similar to the query.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L56"
+    },
+    {
+      "id": "vectorstore_rationale_66",
+      "label": "Search both the transaction documents and the global knowledge base.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L66"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "langchain_text_splitters",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "backend_services_storage",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "vectorstore_generate_embedding",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "vectorstore_generate_query_embedding",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "vectorstore_chunk_and_store",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "vectorstore_search_similar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "target": "vectorstore_search_all_relevant",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_search_similar",
+      "target": "vectorstore_generate_query_embedding",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_search_all_relevant",
+      "target": "vectorstore_search_similar",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_vectorstore_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_22",
+      "target": "vectorstore_generate_embedding",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_27",
+      "target": "vectorstore_generate_query_embedding",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_32",
+      "target": "vectorstore_chunk_and_store",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_56",
+      "target": "vectorstore_search_similar",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "vectorstore_rationale_66",
+      "target": "vectorstore_search_all_relevant",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L66",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "vectorstore_generate_embedding",
+      "callee": "embed_documents",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L23"
+    },
+    {
+      "caller_nid": "vectorstore_generate_embedding",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L24"
+    },
+    {
+      "caller_nid": "vectorstore_generate_query_embedding",
+      "callee": "embed_query",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L28"
+    },
+    {
+      "caller_nid": "vectorstore_generate_query_embedding",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L29"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "db_delete",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L33"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "split_text",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "embed_documents",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L41"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "enumerate",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L43"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "zip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L43"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L45"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "db_insert",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L46"
+    },
+    {
+      "caller_nid": "vectorstore_chunk_and_store",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L53"
+    },
+    {
+      "caller_nid": "vectorstore_search_similar",
+      "callee": "db_rpc",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "str",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L68"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "uuid5",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L68"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "extend",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L74"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "extend",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L77"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "set",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L80"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "add",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L84"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L85"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "sort",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L88"
+    },
+    {
+      "caller_nid": "vectorstore_search_all_relevant",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/vectorstore.py",
+      "source_location": "L88"
+    }
+  ]
+}

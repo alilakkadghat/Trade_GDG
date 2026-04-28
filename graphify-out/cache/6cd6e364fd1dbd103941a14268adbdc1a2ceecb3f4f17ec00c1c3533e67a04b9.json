@@ -1,0 +1,334 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_compliance_py",
+      "label": "compliance.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "compliance_resolve_country",
+      "label": "_resolve_country()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L122"
+    },
+    {
+      "id": "compliance_check_compliance",
+      "label": "check_compliance()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "compliance_check_date_logic",
+      "label": "_check_date_logic()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "compliance_make_check",
+      "label": "_make_check()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L218"
+    },
+    {
+      "id": "compliance_rationale_1",
+      "label": "Compliance engine \u2014 validates documents against destination-country rules. Cover",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "compliance_rationale_128",
+      "label": "Run compliance checks for a transaction against destination country rules.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L128"
+    },
+    {
+      "id": "compliance_rationale_204",
+      "label": "Check that document dates are in logical order.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L204"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_compliance_py",
+      "target": "backend_services_storage",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_compliance_py",
+      "target": "compliance_resolve_country",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_compliance_py",
+      "target": "compliance_check_compliance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_compliance_py",
+      "target": "compliance_check_date_logic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_compliance_py",
+      "target": "compliance_make_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_check_compliance",
+      "target": "compliance_make_check",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_check_compliance",
+      "target": "compliance_resolve_country",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_check_compliance",
+      "target": "compliance_check_date_logic",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_check_date_logic",
+      "target": "compliance_make_check",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_compliance_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_rationale_128",
+      "target": "compliance_check_compliance",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "compliance_rationale_204",
+      "target": "compliance_check_date_logic",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L204",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "compliance_resolve_country",
+      "callee": "upper",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L123"
+    },
+    {
+      "caller_nid": "compliance_resolve_country",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L123"
+    },
+    {
+      "caller_nid": "compliance_resolve_country",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L124"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "db_delete",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L130"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "db_select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L134"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L141"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L141"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L146"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "db_select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L151"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L152"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L152"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L159"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L164"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "items",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L172"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L172"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L173"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "db_select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L175"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L176"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L179"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L184"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "extend",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L192"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L195"
+    },
+    {
+      "caller_nid": "compliance_check_compliance",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L196"
+    },
+    {
+      "caller_nid": "compliance_check_date_logic",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L207"
+    },
+    {
+      "caller_nid": "compliance_check_date_logic",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L208"
+    },
+    {
+      "caller_nid": "compliance_check_date_logic",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L210"
+    },
+    {
+      "caller_nid": "compliance_make_check",
+      "callee": "db_insert",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/compliance.py",
+      "source_location": "L227"
+    }
+  ]
+}

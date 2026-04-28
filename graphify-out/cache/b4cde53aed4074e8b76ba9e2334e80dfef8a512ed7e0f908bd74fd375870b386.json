@@ -1,0 +1,180 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_extractor_py",
+      "label": "extractor.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "extractor_extract_fields",
+      "label": "extract_fields()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "extractor_rationale_1",
+      "label": "Field extractor \u2014 uses Gemini to extract structured fields per document type.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "extractor_rationale_30",
+      "label": "Extract structured fields from document text using Gemini.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L30"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_extractor_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_extractor_py",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_extractor_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_extractor_py",
+      "target": "extractor_extract_fields",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "extractor_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_extractor_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "extractor_rationale_30",
+      "target": "extractor_extract_fields",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L30",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "ChatGoogleGenerativeAI",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L31"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L37"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "invoke",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L45"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L46"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "startswith",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L49"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "split",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L50"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "endswith",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L51"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L53"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "startswith",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L54"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L55"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "loads",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "items",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "str",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "extractor_extract_fields",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/extractor.py",
+      "source_location": "L67"
+    }
+  ]
+}

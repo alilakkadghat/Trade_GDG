@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
+
 import {
   Home,
   FileText,
@@ -68,7 +71,55 @@ const titleMap: Record<string, string> = {
 
 export function AppShell({ children }: { children?: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
   const title = titleMap[pathname] ?? "TradeBot";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [user, setUser] = useState<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [userMeta, setUserMeta] = useState<any>(null);
+
+  const [loadingAuth, setLoadingAuth] = useState(true);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        setUser(session.user);
+        setUserMeta(session.user.user_metadata);
+      } else {
+        router.push("/login");
+      }
+      setLoadingAuth(false);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session) {
+        setUser(session.user);
+        setUserMeta(session.user.user_metadata);
+      } else {
+        setUser(null);
+        setUserMeta(null);
+        router.push("/login");
+      }
+      setLoadingAuth(false);
+    });
+
+    return () => subscription.unsubscribe();
+  }, [router]);
+
+  if (loadingAuth) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-surface">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.replace("/login");
+  };
 
   return (
     <div className="min-h-screen flex bg-surface">
@@ -119,13 +170,13 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
             <Settings className="h-4 w-4" strokeWidth={1.75} />
             User Settings
           </Link>
-          <Link
-            href="/login"
-            className="flex items-center gap-3 px-4 py-2.5 rounded-md text-sm text-muted-foreground hover:bg-surface-container hover:text-foreground"
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center gap-3 px-4 py-2.5 rounded-md text-sm text-muted-foreground hover:bg-surface-container hover:text-foreground"
           >
             <LogOut className="h-4 w-4" strokeWidth={1.75} />
             Logout
-          </Link>
+          </button>
         </div>
       </aside>
 
@@ -206,18 +257,23 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
                   aria-label="User menu"
                   className="h-9 w-9 rounded-md bg-primary text-primary-foreground grid place-items-center text-sm font-medium outline-none focus-visible:ring-2 focus-visible:ring-secondary"
                 >
-                  R
+                  {userMeta?.full_name?.[0] || user?.email?.[0]?.toUpperCase() || "U"}
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-64">
                 <div className="px-2 py-2">
-                  <div className="text-sm font-semibold text-foreground">Rohan Mehta</div>
-                  <div className="text-xs text-muted-foreground">rohan@kanchan-exports.in</div>
+                  <div className="text-sm font-semibold text-foreground">
+                    {userMeta?.full_name || "Workspace User"}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {user?.email || "user@trade-bot.in"}
+                  </div>
                   <div className="mt-2 flex items-center gap-1.5 text-[11px] text-muted-foreground">
                     <Building2 className="h-3 w-3" />
-                    Kanchan Exports Pvt Ltd
+                    {userMeta?.company_name || "Default Organization"}
                   </div>
                 </div>
+
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="text-[10px] uppercase tracking-wider text-muted-foreground font-normal">
                   Account
@@ -239,11 +295,12 @@ export function AppShell({ children }: { children?: React.ReactNode }) {
                   Help & docs
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem asChild>
-                  <Link href="/login" className="cursor-pointer text-on-destructive-container">
-                    <LogOut className="h-4 w-4" />
-                    Logout
-                  </Link>
+                <DropdownMenuItem
+                  onClick={handleLogout}
+                  className="cursor-pointer text-on-destructive-container focus:text-on-destructive-container"
+                >
+                  <LogOut className="h-4 w-4" />
+                  Logout
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

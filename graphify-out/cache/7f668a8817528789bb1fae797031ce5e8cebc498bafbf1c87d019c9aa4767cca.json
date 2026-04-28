@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_test_model_py",
+      "label": "test_model.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_model_search_knowledge",
+      "label": "search_knowledge()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L9"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "langchain_core_messages",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "logging",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_test_model_py",
+      "target": "test_model_search_knowledge",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/test_model.py",
+      "source_location": "L9",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": []
+}

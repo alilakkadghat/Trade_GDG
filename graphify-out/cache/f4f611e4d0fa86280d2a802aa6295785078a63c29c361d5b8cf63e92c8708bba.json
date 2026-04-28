@@ -1,0 +1,463 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_models_schemas_py",
+      "label": "schemas.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_documenttype",
+      "label": "DocumentType",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L15"
+    },
+    { "id": "str", "label": "str", "file_type": "code", "source_file": "", "source_location": "" },
+    {
+      "id": "enum",
+      "label": "Enum",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "schemas_documentstatus",
+      "label": "DocumentStatus",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "schemas_severity",
+      "label": "Severity",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "schemas_validationstatus",
+      "label": "ValidationStatus",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "schemas_extractedfield",
+      "label": "ExtractedField",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L52"
+    },
+    {
+      "id": "basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "schemas_documentrecord",
+      "label": "DocumentRecord",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "schemas_uploadresponse",
+      "label": "UploadResponse",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L77"
+    },
+    {
+      "id": "schemas_extractionresponse",
+      "label": "ExtractionResponse",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L85"
+    },
+    {
+      "id": "schemas_documentlistresponse",
+      "label": "DocumentListResponse",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L95"
+    },
+    {
+      "id": "schemas_validationresult",
+      "label": "ValidationResult",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "schemas_rationale_1",
+      "label": "Pydantic schemas for the Document Intelligence API. These define the shape of da",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_rationale_53",
+      "label": "A single field extracted from a document.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L53"
+    },
+    {
+      "id": "schemas_rationale_61",
+      "label": "A processed document with metadata and extracted fields.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L61"
+    },
+    {
+      "id": "schemas_rationale_78",
+      "label": "Response after uploading a document.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "schemas_rationale_86",
+      "label": "Response after extracting data from a document.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L86"
+    },
+    {
+      "id": "schemas_rationale_96",
+      "label": "Response for listing documents.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L96"
+    },
+    {
+      "id": "schemas_rationale_102",
+      "label": "A single cross-document validation finding.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L102"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "pydantic",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "enum",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_documenttype",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documenttype",
+      "target": "str",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documenttype",
+      "target": "enum",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_documentstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documentstatus",
+      "target": "str",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documentstatus",
+      "target": "enum",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_severity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_severity",
+      "target": "str",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_severity",
+      "target": "enum",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_validationstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_validationstatus",
+      "target": "str",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_validationstatus",
+      "target": "enum",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_extractedfield",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_extractedfield",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_documentrecord",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documentrecord",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_uploadresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_uploadresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_extractionresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_extractionresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_documentlistresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_documentlistresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_models_schemas_py",
+      "target": "schemas_validationresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_validationresult",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_1",
+      "target": "users_apple_trade_gdg_backend_models_schemas_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_53",
+      "target": "schemas_extractedfield",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_61",
+      "target": "schemas_documentrecord",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_78",
+      "target": "schemas_uploadresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_86",
+      "target": "schemas_extractionresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_96",
+      "target": "schemas_documentlistresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_rationale_102",
+      "target": "schemas_validationresult",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/schemas.py",
+      "source_location": "L102",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": []
+}

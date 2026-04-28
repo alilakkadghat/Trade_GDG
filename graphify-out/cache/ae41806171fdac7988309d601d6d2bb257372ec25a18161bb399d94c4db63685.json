@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_rag_py",
+      "label": "rag.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "rag_query_documents",
+      "label": "query_documents()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "rag_rationale_1",
+      "label": "RAG pipeline \u2014 Agentic approach using Gemini to route between direct answers and",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "rag_rationale_12",
+      "label": "Robust Direct RAG query: Embeds query, retrieves chunks from Supabase, and gener",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L12"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "langchain_core_messages",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "backend_services_vectorstore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_rag_py",
+      "target": "rag_query_documents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "rag_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_rag_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "rag_rationale_12",
+      "target": "rag_query_documents",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L12",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "search_all_relevant",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L20"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "set",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L24"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L27"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L28"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L29"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L30"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L32"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "add",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L35"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L36"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "round",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L39"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L39"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "join",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L42"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "ChatGoogleGenerativeAI",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "invoke",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "SystemMessage",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "HumanMessage",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L66"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "isinstance",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "join",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "str",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "isinstance",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "str",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "rag_query_documents",
+      "callee": "str",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/rag.py",
+      "source_location": "L79"
+    }
+  ]
+}

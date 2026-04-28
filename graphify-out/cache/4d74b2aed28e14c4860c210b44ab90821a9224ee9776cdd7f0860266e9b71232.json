@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_validator_py",
+      "label": "validator.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "validator_normalize",
+      "label": "_normalize()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "validator_is_match",
+      "label": "_is_match()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L58"
+    },
+    {
+      "id": "validator_get_field_value",
+      "label": "_get_field_value()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "validator_validate_transaction",
+      "label": "validate_transaction()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "validator_rationale_1",
+      "label": "Cross-document validator \u2014 compares extracted fields across all documents in a t",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "validator_rationale_81",
+      "label": "Run cross-document validation on all documents in a transaction.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L81"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "backend_services_storage",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "difflib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "validator_normalize",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "validator_is_match",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "validator_get_field_value",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_validator_py",
+      "target": "validator_validate_transaction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "validator_is_match",
+      "target": "validator_normalize",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "validator_validate_transaction",
+      "target": "validator_get_field_value",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "validator_validate_transaction",
+      "target": "validator_is_match",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "validator_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_validator_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "validator_rationale_81",
+      "target": "validator_validate_transaction",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L81",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "validator_normalize",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L37"
+    },
+    {
+      "caller_nid": "validator_normalize",
+      "callee": "lower",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L37"
+    },
+    {
+      "caller_nid": "validator_normalize",
+      "callee": "items",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L51"
+    },
+    {
+      "caller_nid": "validator_normalize",
+      "callee": "sub",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L52"
+    },
+    {
+      "caller_nid": "validator_normalize",
+      "callee": "sub",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L55"
+    },
+    {
+      "caller_nid": "validator_is_match",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "validator_is_match",
+      "callee": "ratio",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L66"
+    },
+    {
+      "caller_nid": "validator_is_match",
+      "callee": "SequenceMatcher",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L66"
+    },
+    {
+      "caller_nid": "validator_get_field_value",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L75"
+    },
+    {
+      "caller_nid": "validator_get_field_value",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L75"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "db_delete",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L82"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "db_select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L84"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L85"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "db_select",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L90"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L92"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "get",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L92"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "list",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L97"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "keys",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L97"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L104"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "len",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L106"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "format",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L119"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "db_insert",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L121"
+    },
+    {
+      "caller_nid": "validator_validate_transaction",
+      "callee": "append",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/validator.py",
+      "source_location": "L122"
+    }
+  ]
+}

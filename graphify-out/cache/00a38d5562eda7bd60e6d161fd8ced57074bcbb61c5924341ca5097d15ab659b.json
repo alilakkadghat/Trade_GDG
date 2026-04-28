@@ -1,0 +1,39 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_src_components_ui_bits_tsx",
+      "label": "ui-bits.tsx",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/ui-bits.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ui_bits_card",
+      "label": "Card()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/src/components/ui-bits.tsx",
+      "source_location": "L3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_src_components_ui_bits_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/ui-bits.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_src_components_ui_bits_tsx",
+      "target": "ui_bits_card",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/src/components/ui-bits.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": []
+}

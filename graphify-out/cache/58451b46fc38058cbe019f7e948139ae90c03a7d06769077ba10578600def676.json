@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_services_classifier_py",
+      "label": "classifier.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "classifier_classify_document",
+      "label": "classify_document()",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "classifier_rationale_1",
+      "label": "Document classifier \u2014 uses Gemini to identify document type.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "classifier_rationale_27",
+      "label": "Classify document type using Gemini.",
+      "file_type": "rationale",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L27"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_services_classifier_py",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_classifier_py",
+      "target": "backend_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_services_classifier_py",
+      "target": "classifier_classify_document",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "classifier_rationale_1",
+      "target": "users_apple_trade_gdg_backend_services_classifier_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "classifier_rationale_27",
+      "target": "classifier_classify_document",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L27",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "ChatGoogleGenerativeAI",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L28"
+    },
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "invoke",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "format",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L35"
+    },
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L35"
+    },
+    {
+      "caller_nid": "classifier_classify_document",
+      "callee": "strip",
+      "source_file": "/Users/apple/Trade_GDG/backend/services/classifier.py",
+      "source_location": "L35"
+    }
+  ]
+}

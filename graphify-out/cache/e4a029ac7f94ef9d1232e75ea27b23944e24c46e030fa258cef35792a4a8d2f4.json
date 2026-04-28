@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "label": "scratch_test_rag.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "backend_services_rag",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "users_apple_trade_gdg_backend_scratch_test_rag_py",
+      "target": "traceback",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/apple/Trade_GDG/backend/scratch_test_rag.py",
+      "source_location": "L17",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": []
+}

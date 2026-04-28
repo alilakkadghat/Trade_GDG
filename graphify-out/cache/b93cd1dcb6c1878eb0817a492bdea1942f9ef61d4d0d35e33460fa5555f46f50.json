@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {
+      "id": "users_apple_trade_gdg_backend_models_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "/Users/apple/Trade_GDG/backend/models/__init__.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [],
+  "raw_calls": []
+}

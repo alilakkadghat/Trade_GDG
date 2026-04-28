@@ -1,0 +1,20 @@
+/Users/apple/Trade_GDG/backend/requirements.txt
+/Users/apple/Trade_GDG/data_for_RAG/CIEP.pdf
+/Users/apple/Trade_GDG/data_for_RAG/EPS.pdf
+/Users/apple/Trade_GDG/data_for_RAG/TF.pdf
+/Users/apple/Trade_GDG/data_for_RAG/HTE.pdf
+/Users/apple/Trade_GDG/data_for_RAG/SCOO.pdf
+/Users/apple/Trade_GDG/data_for_RAG/EI.pdf
+/Users/apple/Trade_GDG/data_for_RAG/General_Note_on_Export_Policy_2025.pdf
+/Users/apple/Trade_GDG/data_for_RAG/how to read export policy.pdf
+/Users/apple/Trade_GDG/data_for_RAG/NCSTC+2026+Handbook+on+India's+Strategic+Trade+Control+System+(13.01.2026).pdf
+/Users/apple/Trade_GDG/data_for_RAG/GAE.pdf
+/Users/apple/Trade_GDG/data_for_RAG/TTDA.pdf
+/Users/apple/Trade_GDG/data_for_RAG/UPDATED SCOMET List 2024 as on 02.09.2024.pdf
+/Users/apple/Trade_GDG/data_for_RAG/Export Policy.pdf
+/Users/apple/Trade_GDG/backend/backend_response2/Screenshot 2026-04-28 at 3.12.48 PM.png
+/Users/apple/Trade_GDG/backend/backend_response2/Screenshot 2026-04-28 at 3.12.05 PM.png
+/Users/apple/Trade_GDG/backend/backend_response2/Screenshot 2026-04-28 at 3.12.21 PM.png
+/Users/apple/Trade_GDG/backend/backend_response2/Screenshot 2026-04-28 at 3.11.54 PM.png
+/Users/apple/Trade_GDG/backend/backend_response/Screenshot 2026-04-28 at 2.35.03 PM.png
+/Users/apple/Trade_GDG/backend/backend_response/Screenshot 2026-04-28 at 2.32.56 PM.png
